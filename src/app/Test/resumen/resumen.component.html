@@ -1,0 +1,48 @@
+
+
+<div class="row w-110 text-center bg-info" style="margin-bottom: 2.6vh;">
+  <h1 class="display-4 fw-medium" style="padding: 1.5%;">RESUMEN</h1>
+</div>
+
+<!-- <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+    </div>-->
+    <div class="col"> 
+
+      <nav class="nav bg-dark" style="padding: 1%;">
+        <a class="nav-link active" aria-current="page" routerLink="Hoy" routerLinkActive="router-link-active" >HOY</a>
+        <a class="nav-link" routerLink="Ayer" routerLinkActive="router-link-active" >AYER</a>
+        <a class="nav-link" routerLink="Semanal" routerLinkActive="router-link-active" >SEMANAL</a>
+        <a class="nav-link" routerLink="Mensual" routerLinkActive="router-link-active">MENSUAL</a>
+
+        <div class="d-flex justify-content-end align-items-center flex-grow-1">
+
+          <form class="d-flex col-4" (ngSubmit)="buscar()">
+            <input [(ngModel)]="term" name="terminoBusqueda" id="BuscarResumen" class="form-control sm me-4" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" >Buscar</button>
+          </form>
+
+        </div>
+      </nav>
+
+      @if (UrlActual.includes('Hoy')){
+        <app-hoy  ></app-hoy>
+      }@else if (UrlActual.includes('Ayer')) {
+        <app-ayer></app-ayer>
+
+      }@else if (UrlActual.includes('Semanal')){
+        <app-semanal></app-semanal>
+
+      }@else if (UrlActual.includes('Mensual')){
+        <app-mensual></app-mensual>
+
+      }
+      
+    </div>
+  <!--   <div class="col">
+        
+    </div>
+  </div>
+</div> -->

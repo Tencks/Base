@@ -1,0 +1,16 @@
+#ticket {
+    font-family: Arial, sans-serif;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  #ticket h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  #ticket p {
+    margin-bottom: 5px;
+  }
+  

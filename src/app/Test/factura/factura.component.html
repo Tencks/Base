@@ -1,0 +1,40 @@
+
+  <div class="row w-110 text-center bg-info" style="margin-bottom: 2.6vh;">
+    <h1 class="display-4 fw-medium" style="padding: 1.5%;">FACTURACIÓN</h1>
+</div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        
+      </div>
+      <div class="col">
+        
+        <form id="facturaFormulario" [formGroup]="facturaForm" (ngSubmit)="submitForm()">
+      
+          <div class="mb-3">
+            <label for="Product" class="form-label">Producto</label> 
+            <!--EL LABEL DEBE TENR EL ATRIBUTO for CON EL MISMO NOMBRE QUE EL id DEL INPUT-->
+            <!--for="Product" y id="Product"  ESTO EVITA ERRORES DE SINTAXYS-->
+            <input type="text" id="Product" class="form-control"  placeholder="PAN" formControlName="Product">
+          </div>
+          <div class="mb-3">
+            <label for="Valor" class="form-label">Valor</label>
+            <input type="number" id="Valor" class="form-control"  formControlName="Valor">
+          </div>
+          <div class="mb-3 form-check">
+            <label>
+              <input type="checkbox" class="form-check-input" name="generateTicket" [(ngModel)]="generateTicket" [ngModelOptions]="{standalone: true}">Imprime ticket
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">PAGAR</button>
+        </form>
+        
+
+
+      </div>
+      <div class="col">  
+      </div>
+    </div>
+  </div>
+  

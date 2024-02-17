@@ -1,0 +1,34 @@
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+       @if (User == 'MASTER') {<th scope="col">ID</th>}  
+          <th scope="col">PRODUCTO</th>
+          <th scope="col">PRECIO</th>
+          <th scope="col">FECHA</th>
+        </tr>
+      </thead>
+    <!-- NUEVA SINTAXYS FOR DE ANGULAR 17v -->
+    @for (dato of datosFiltrados; track dato.id ){
+      <tbody>
+        <tr > 
+          @if (User == 'MASTER') { <td scope="row">{{dato.id}}</td>}
+          <td>{{dato.producto}}</td>
+          <td>{{dato.precio}}</td>
+          <td>{{dato.fecha}}</td>
+        </tr>
+      </tbody>
+    } @empty{
+      @for(dato of datos; track dato.id) {
+        <tbody>
+          <tr > 
+            @if (User == 'MASTER') { <td scope="row">{{dato.id}}</td>}
+            <td>{{dato.producto}}</td>
+            <td>{{dato.precio}}</td>
+            <td>{{dato.fecha}}</td>
+          </tr>
+        </tbody>
+    } 
+    }
+  </table>
+
